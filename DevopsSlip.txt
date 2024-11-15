@@ -1,0 +1,199 @@
+ Q1
+Create a simple project, push it to a remote repository on BitBucket, and create a 
+new branch. Merge this branch into the main branch and display a chronological 
+history of commits
+
+
+
+1. Create a Simple Project
+#Open your terminal and create a directory for the project.
+mkdir simple-project
+cd simple-project
+
+
+#Initialize it as a Git repository:
+git init
+
+
+#Create a basic project file:
+echo "# Simple Project" > README.md
+
+#Stage and commit the file:
+git add README.md
+git commit -m "Initial commit"
+
+#Push to a Remote Repository on BitBucket
+Create a Repository on BitBucket:
+Go to BitBucket and create a new repository named "simple-project".
+
+#Add the Remote Repository:
+In your terminal, link the local repository to the remote:
+git remote add origin <your-repository-URL>
+
+#Push the Code to BitBucket:
+git branch -M main
+git push -u origin main
+
+
+#3. Create a New Branch
+Create and switch to a new branch:
+git checkout -b new-feature
+
+#Stage and commit the changes:
+git add README.md
+git commit -m "Add a new feature"
+
+#Push the new branch to the remote repository:
+git push -u origin new-feature
+
+
+#4. Merge the Branch into main
+Switch back to the main branch:
+git checkout main
+
+
+#Merge the new-feature branch into main:
+git merge new-feature
+#Push the updated main branch to the remote repository:
+git push origin main
+
+
+#5. Display a Chronological History of Commits
+Use the following command to view the commit history:
+git log --oneline --graph --decorate --all
+
+ANS :::  
+Sample Output
+Here’s how the commit history might look:
+
+sql
+Copy code
+*   2b3f1a5 (HEAD -> main, origin/main) Merge branch 'new-feature'
+|\  
+| * e9f1b12 (origin/new-feature, new-feature) Add a new feature
+|/  
+* 1a2d3c4 Initial commit
+
+
+
+
+
+
+
+
+Q2
+Create a simple project, push it to a remote repository on Github , and create a 
+new branch. Merge this branch into the main branch and display a chronological 
+history of commits.and Pull the changes on your local machine.
+
+1. Create a Simple Project Locally
+# Create a new project folder
+
+mkdir simple-project
+cd simple-project
+
+# Initialize a Git repository
+
+git init
+
+# Create a simple file
+
+echo "Hello, World!" > index.html
+
+# Stage and commit the file
+
+git add index.html
+git commit -m "Initial commit"
+
+2. Create a Remote Repository on GitHub
+Go to GitHub and create a new repository.
+Copy the remote URL for the repository.
+
+3. Push the Project to GitHub
+# Add the remote repository
+
+git remote add origin <REMOTE_REPO_URL>
+
+# Push changes to the remote main branch
+
+git branch -M main
+git push -u origin main
+
+4. Create and Switch to a New Branch
+# Create a new branch
+git checkout -b new-feature
+
+# Make changes
+echo "This is a new feature!" >> index.html
+
+# Stage and commit changes
+
+git add index.html
+git commit -m "Add new feature"
+
+5. Push the New Branch to GitHub
+
+git push -u origin new-feature
+
+6. Merge the New Branch into the Main Branch
+Open a Pull Request on GitHub to merge new-feature into main.
+Merge the Pull Request on the GitHub interface.
+Alternatively, you can merge locally:
+# Switch to the main branch
+
+git checkout main
+
+# Merge the new-feature branch
+
+git merge new-feature
+
+# Push changes to the remote main branch
+
+git push
+
+7. View Commit History
+To see the commit history in chronological order:
+
+git log --oneline --graph --all
+
+8. Pull Changes Locally
+If changes were merged directly on GitHub:
+
+git pull origin main
+
+This ensures your local main branch is up to date with the remote repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
